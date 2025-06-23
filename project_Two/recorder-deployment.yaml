@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-cam-recorder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recorder
+  template:
+    metadata:
+      labels:
+        app: recorder
+    spec:
+      containers:
+      - name: recorder
+        image: sohaibsharih/mobile-cam-recorder
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: video-storage
+          mountPath: /app
+      volumes:
+      - name: video-storage
+        hostPath:
+          path: /mnt/host-recordings
+          type: Directory

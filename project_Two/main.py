@@ -9,12 +9,16 @@ cap = cv2.VideoCapture(url)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
 
+printed_success = False
+
 while True:
     ret, frame = cap.read()
     if not ret:
         print("Can't receive frame.")
         break
-    print("The video is recording... Success !!!")
+    If not printed_success:
+        print("The video is recording... Success !!!")
+        printed_success = True
     frame = cv2.resize(frame, (640, 480))  # optional resize
     out.write(frame)
     # cv2.imshow('frame', frame) #Commented because Kubernetes + Docker don't have GUI Features

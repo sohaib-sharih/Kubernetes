@@ -16,3 +16,7 @@ Minikube is a local Kubernetes tool that enables developers to run a single-node
 | -------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1        | Project_One | Web App that allows you to update fields in Mongo DB through the front end. This App runs in the Kubernetes Cluster.                                                                                                                                                 |
 | 2        | Project_Two | A Python-based app that captures video from an Android phone using the IP Webcam app over Wi-Fi and saves it directly to your host machine. Containerized with Docker and deployable via Kubernetes (Minikube). Great for DevOps practice and media streaming demos. |
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
